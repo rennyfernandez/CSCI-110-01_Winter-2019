@@ -1,0 +1,69 @@
+C Style Guide
+
+Preface: Coding style is important for a number of reasons.  Once in industry you will be reading other developers code and writing code other developers will have to read.  To save you and the company time, it is important that the code is easy to follow.  Lastly, the best reason for getting into the habit of following style is it will make you a better and more efficient programmer.  Bugs will inevitably come up and tracking them down in your code as fast as possible will be easier if you (or your instructor) can easily see what your code does.
+
+For this class, follow the following guidelines:
+•	Have a comment header with author names, filename, class, section, date, and description of code
+•	Use comments throughout your code explaining what it does. 
+o	Comments above lines of code should have same indent alignment as following code.
+o	Make sure comments do not make line extend beyond 100 characters.
+•	Use blank lines to separate conceptually distinct statements.
+•	Each block should be aligned and indented with at least 3 spaces from the previous block.
+o	A block is any sequence of lines between braces.
+•	An if, else, else if, for loop, while loop, all should use braces.
+•	All braces should be on the same line as a statement:
+o	if(x == 1){
+o	}else{ …  
+o	this reduces the number of lines in your source file.
+•	The ending brace should line up with the starting character of the statement that started it, such as if, for, while or }else{.
+•	Lines should be 100 characters or fewer (including comments).
+•	Use a single space before and after any operators like =, +, *, or << to make statements more readable.
+o	(a + b) is correct  but (a+b) is not.  
+o	(a < 5) is correct but (a<5) is not.
+•	Variables names
+o	should be all lowercase and have underscores between_words if more than one word. 
+o	should describe what they are
+•	Function names should be camelCase.
+•	Constants should be all CAPS.
+
+
+
+
+
+
+Example of a well-styled Program:
+
+/*
+   Author: Ace Student
+   Class: CSCI 155
+   Section: 01
+   Date: Jan. 23, 2018
+   Filename: ace_hw.c
+   Desc: Output GCD of user-input numA and numB
+*/
+
+#include <stdio.h>
+
+int main(void) {
+   int num_a;  // User input
+   int num_b;  // User input
+   
+   printf("Enter first positive integer: ");
+   scanf("%d", &num_a);
+   
+   printf("Enter second positive integer: ");
+   scanf("%d", &num_b);
+   
+   while (num_a != num_b) { // Euclid's algorithm
+      if (num_b > num_a) {
+         num_b = num_b - num_a;
+      } else {
+         num_a = num_a - num_b;
+      }
+   }
+   
+   printf("GCD is: %d\n", num_a);
+   
+   return 0;
+}
+

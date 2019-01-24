@@ -1,0 +1,21 @@
+/*                                                                                                                     
+  Name: Student name
+  Date: MM/DD/2019
+  Desc: Summation example-1
+  To compile , type this, gcc filename.c
+  To compile , type this, ./a.out
+*/
+
+#include<stdio.h>
+
+main(){
+    /* variable definition: */
+    int sum, sum1; 
+    
+    sum=10;
+    sum1=100;
+    sum1=sum+sum1+sum;/ add the values stored in the left 
+    printf("value of sum1:%d \n",sum1);/Displays the content inside quotation
+    printf("value of sum:%d\n",sum);/Displays the content inside quotation
+    return 0;
+}

@@ -9,4 +9,5 @@ main() {
    y= sqrt(y+1);
    printf("the value of y is %lf \n\n", y);
    return 0;
+   /* compile using (gcc filename.c -lm) and (./a.out)*/
 }

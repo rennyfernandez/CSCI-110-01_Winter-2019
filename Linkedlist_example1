@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node { int data;
+    struct node* next;
+ };
+ 
+ struct node *head, *temp, *loc_head;
+ 
+ void createlist(int n) {
+     int i;
+     for(i=0;i<n; i++) {
+         struct node* newnode= malloc(sizeof(struct node));
+         printf("enter your data for node %d", i);
+         scanf("%d", &newnode->data);
+         newnode->next= NULL;
+         
+         if(head==NULL) {
+             head=newnode;
+             loc_head= newnode;
+         }
+         else {
+             head->next=newnode;
+             head = newnode;
+         }
+     }
+     head=loc_head;
+ }
+ 
+  void printlist() {
+      struct node *temp=(struct node*) malloc(sizeof(struct node));
+      temp=head;
+      while(temp!=NULL) {
+          printf("%d\n", temp->data);
+          temp=temp->next;
+      }
+  }
+ int main(void) {
+     int n;
+     head=NULL;
+     printf("how many nodes do you want?");
+     scanf("%d", &n);
+     createlist(n);
+     printlist();
+     return 0;
+ }
